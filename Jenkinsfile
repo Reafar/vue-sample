@@ -1,11 +1,11 @@
 pipeline {
   agent any
-  stages {
-    stage('Check for vulnerabilities') {
-      steps {
-        sh 'npm audit --parseable --production || exit 0'
-      }
-    }
+  // stages {
+  //   stage('Check for vulnerabilities') {
+  //     steps {
+  //       sh 'npm audit --parseable --production || exit 0'
+  //     }
+  //   }
 
     stage('download dependencies') {
       steps {
