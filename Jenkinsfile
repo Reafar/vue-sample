@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  // stages {
+  stages {
   //   stage('Check for vulnerabilities') {
   //     steps {
   //       sh 'npm audit --parseable --production || exit 0'
