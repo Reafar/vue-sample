@@ -1,27 +1,27 @@
 pipeline {
   agent any
   stages {
-    stage('Загрузка зависимостей') {
+    stage('Download dependencies') {
       steps {
-        echo 'Статический анализ кода'
-        sh 'npm ci'
+        echo 'Download dependencies...'
+        sh 'npm install'
       }
     }
 
-    stage('Статический анализ кода') {
+    stage('Check linting') {
       steps {
-        echo 'Статический анализ кода'
+        echo 'Check linting'
       }
     }
 
-    stage('Тесты') {
+    stage('Tests') {
       steps {
         echo 'Test report'
         echo 'Test coverage'
       }
     }
 
-    stage('Сборка проекта') {
+    stage('Build') {
       steps {
         echo 'Build'
       }
