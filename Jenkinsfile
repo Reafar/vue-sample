@@ -9,13 +9,17 @@ pipeline {
 
     stage('Тесты') {
       steps {
-        echo 'Тесты'
+        echo 'Test report'
+      }
+
+      steps {
+        echo 'Test coverage'
       }
     }
 
     stage('Сборка проекта') {
       steps {
-        echo 'Сборка проекта'
+        echo 'Build'
       }
     }
   }
