@@ -1,6 +1,13 @@
 pipeline {
   agent any
   stages {
+    stage('Загрузка зависимостей') {
+      steps {
+        echo 'Статический анализ кода'
+        sh 'npm ci'
+      }
+    }
+
     stage('Статический анализ кода') {
       steps {
         echo 'Статический анализ кода'
