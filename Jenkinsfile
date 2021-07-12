@@ -10,9 +10,6 @@ pipeline {
     stage('Тесты') {
       steps {
         echo 'Test report'
-      }
-
-      steps {
         echo 'Test coverage'
       }
     }
