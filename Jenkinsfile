@@ -1,15 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('download dependencies') {
+    stage('Статический анализ кода') {
       steps {
-        echo 'download dependencies'
+        echo 'Статический анализ кода'
       }
     }
 
-    stage('Build') {
+    stage('Тесты') {
       steps {
-        echo 'Build'
+        echo 'Тесты'
+      }
+    }
+
+    stage('Сборка проекта') {
+      steps {
+        echo 'Сборка проекта'
       }
     }
   }
