@@ -21,10 +21,10 @@ pipeline {
       }
     }
 
-    stage('Build') {
+    stage('Build dev') {
       steps {
-        echo 'Build'
-        bat 'npm run build'
+        echo 'Build dev'
+        bat 'npm run dev'
       }
     }
 
